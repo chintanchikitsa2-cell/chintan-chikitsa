@@ -57,8 +57,8 @@ export default async function HomePage() {
           </p>
 
           <div className="flex gap-4">
-            <Button>Book a Session</Button>
-            <Button variant="outline">Discovery Call</Button>
+            <Button><Link href="/book">Book a Session</Link></Button>
+            <Button variant="outline"><Link href="/book">Discovery Call</Link></Button>
           </div>
         </div>
       </section >
@@ -178,7 +178,7 @@ export default async function HomePage() {
           </p>
 
           <div className="mt-6">
-            <Button variant="secondary">Secure Your Session</Button>
+            <Button variant="secondary"><Link href="/book">Secure Your Session</Link></Button>
           </div>
         </Card>
       </section >
