@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +32,71 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main className="min-h-screen bg-[#f6f7e8]">
+          {/* ---------------- NAVBAR ---------------- */}
+          < header className="container mx-auto py-6 flex items-center justify-between" >
+            <Link href="/" className="flex items-center gap-2 font-bold text-lg">
+              <Image
+                src="/logo.jpg"
+                alt="Chintan Chikitsa Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10 rounded-md"
+              />
+              Chintan.Chikitsa
+            </Link>
+
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link href="/services">Services</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link href="/about">About</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link href="/book">Contact</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <Button asChild>
+              <Link href="/book">Book Now</Link>
+            </Button>
+          </header >
+          {children}
+          {/* ---------------- FOOTER ---------------- */}
+          < footer className="container mx-auto py-20 border-t" >
+            <div className="grid md:grid-cols-3 gap-12">
+              <div>
+                <p className="large">Chintan.Chikitsa</p>
+                <p className="muted">
+                  Frequency Coach & Holistic Healer guiding you toward mental,
+                  emotional, and spiritual harmony.
+                </p>
+              </div>
+
+              <NavigationMenu>
+                <NavigationMenuList className="flex-col">
+                  {["Services", "About", "Contact", "Privacy"].map((link) => (
+                    <NavigationMenuItem key={link}>
+                      <NavigationMenuLink asChild>
+                        <Link href={`/${link.toLowerCase()}`}>{link}</Link>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+          </footer >
+        </main>
+        <Toaster />
       </body>
     </html>
   );
