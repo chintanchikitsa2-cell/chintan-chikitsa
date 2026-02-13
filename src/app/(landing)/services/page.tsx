@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ServiceDialog } from "@/components/landing/service-dialog";
+import Link from "next/link";
 
 
 
@@ -110,7 +111,7 @@ export default function ServicesPage() {
               </CardContent>
 
               <CardFooter className="gap-3">
-                <Button size="sm">Book Now</Button>
+                <Button size="sm"><Link href="/book">Book Now</Link></Button>
 
                 <ServiceDialog
                   title={s.title}

@@ -27,9 +27,9 @@ export default async function HomePage() {
   const events = await getEvents();
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       {/* ---------------- HERO ---------------- */}
-      <section className="grid md:grid-cols-2 gap-12 items-center py-20">
+      <section className="grid md:grid-cols-2 gap-6 md:gap-12 items-center py-12 md:py-20">
         <AspectRatio ratio={4 / 4} className="rounded-md overflow-hidden">
           <Image
             src="/hero.jpeg"
@@ -42,18 +42,18 @@ export default async function HomePage() {
         <div className="space-y-6">
           <Badge>Frequency Coach</Badge>
 
-          <h1 className="scroll-m-20 text-center md:text-left text-4xl font-extrabold tracking-tight text-balance">
+          <h1 className="scroll-m-20 text-center md:text-left text-3xl md:text-4xl font-extrabold tracking-tight text-balance">
             Elevate Your{" "}
             <span className="italic text-green-900">Inner Frequency</span>
           </h1>
 
-          <p className="leading-7 [&:not(:first-child)]:mt-6">
+          <p className="leading-7 not-first:mt-6 text-sm md:text-base">
             Discover a sanctuary of holistic healing with Deepali Sharma.
             Experience the gentle power of Bach Flower Remedies and the profound
             depth of Regression Therapy.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button><Link href="/book">Book a Session</Link></Button>
             <Button variant="outline"><Link href="/book">Discovery Call</Link></Button>
           </div>
@@ -61,12 +61,12 @@ export default async function HomePage() {
       </section>
 
       {/* ---------------- CORE PHILOSOPHY ---------------- */}
-      <section className="py-20">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
+      <section className="py-12 md:py-20">
+        <h2 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Our Core Philosophy
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
           {[
             {
               title: "Mental Well-being",
@@ -96,12 +96,12 @@ export default async function HomePage() {
       </section>
 
       {/* ---------------- ISSUES ---------------- */}
-      <section className="py-20">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
+      <section className="py-12 md:py-20">
+        <h2 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Issues We Address
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12">
           {[
             "Anxiety Relief",
             "Relationships",
@@ -113,8 +113,8 @@ export default async function HomePage() {
             "Spiritual Blockages",
           ].map((issue) => (
             <Card key={issue} className="text-center rounded-sm">
-              <CardContent className="pt-6">
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              <CardContent className="pt-4 md:pt-6">
+                <h4 className="scroll-m-20 text-base md:text-xl font-semibold tracking-tight">
                   {issue}
                 </h4>
               </CardContent>
@@ -124,12 +124,12 @@ export default async function HomePage() {
       </section>
 
       {/* ---------------- EVENTS ---------------- */}
-      <section className="py-20">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
+      <section className="py-12 md:py-20">
+        <h2 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Upcoming Events
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
           {events.map((event) => (
             <Card key={event._id} className="rounded-sm">
               <AspectRatio ratio={16 / 9} className="p-0 my-[-24]">
@@ -163,22 +163,22 @@ export default async function HomePage() {
       </section>
 
       {/* ---------------- CTA ---------------- */}
-      <section className="py-20">
-        <Card className="text-black text-center p-12 rounded-sm">
-          <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+      <section className="py-12 md:py-20">
+        <Card className="text-black text-center p-6 md:p-12 rounded-sm">
+          <h2 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0">
             Ready to shift your frequency?
           </h2>
 
-          <p className="leading-7 [&:not(:first-child)]:mt-6">
+          <p className="leading-7 not-first:mt-6">
             Schedule your initial consultation today and begin your journey
             toward lasting peace and alignment.
           </p>
 
-          <div className="mt-6">
-            <Button variant="secondary"><Link href="/book">Secure Your Session</Link></Button>
+          <div className="mt-2">
+            <Button variant="outline"><Link href="/book" >Secure Your Session</Link></Button>
           </div>
         </Card>
       </section>
-    </main>
+    </div>
   );
 }

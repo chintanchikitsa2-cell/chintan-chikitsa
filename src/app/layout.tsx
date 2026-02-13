@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Toaster } from "@/components/ui/sonner";
+import { MobileNav } from "@/components/layout/MobileNav";
+import { DynamicBreadcrumb } from "@/components/layout/DynamicBreadcrumb";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,21 +34,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="min-h-screen bg-[#f6f7e8]">
+        <main className="min-h-screen bg-[#f6f7e8] overflow-x-hidden">
           {/* ---------------- NAVBAR ---------------- */}
-          < header className="container mx-auto py-6 flex items-center justify-between" >
-            <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-              <Image
-                src="/logo.jpg"
-                alt="Chintan Chikitsa Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10 rounded-md"
-              />
-              Chintan.Chikitsa
-            </Link>
+          <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-2">
+              <MobileNav />
+              <Link href="/" className="flex items-center gap-2 font-bold text-base md:text-lg">
+                <Image
+                  src="/logo.jpg"
+                  alt="Chintan Chikitsa Logo"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-md shrink-0"
+                />
+                <span className="hidden sm:inline">Chintan.Chikitsa</span>
+              </Link>
+            </div>
 
-            <NavigationMenu>
+            <NavigationMenu className="hidden md:block">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
@@ -66,14 +71,18 @@ export default function RootLayout({
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button asChild>
+            <Button asChild size="sm" className="hidden md:flex">
               <Link href="/book">Book Now</Link>
             </Button>
-          </header >
+          </header>
+
+          {/* ---------------- BREADCRUMB ---------------- */}
+          <DynamicBreadcrumb />
+
           {children}
           {/* ---------------- FOOTER ---------------- */}
-          < footer className="container mx-auto py-20 border-t" >
-            <div className="grid md:grid-cols-3 gap-12">
+          <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 border-t">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
               <div>
                 <p className="large">Chintan.Chikitsa</p>
                 <p className="muted">
@@ -94,7 +103,7 @@ export default function RootLayout({
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
-          </footer >
+          </footer>
         </main>
         <Toaster />
       </body>
