@@ -27,12 +27,9 @@ export default async function HomePage() {
   const events = await getEvents();
 
   return (
-
-    <>
-
-
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* ---------------- HERO ---------------- */}
-      < section className="container mx-auto grid md:grid-cols-2 gap-12 items-center py-20" >
+      <section className="grid md:grid-cols-2 gap-12 items-center py-20">
         <AspectRatio ratio={4 / 4} className="rounded-md overflow-hidden">
           <Image
             src="/hero.jpeg"
@@ -61,10 +58,10 @@ export default async function HomePage() {
             <Button variant="outline"><Link href="/book">Discovery Call</Link></Button>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* ---------------- CORE PHILOSOPHY ---------------- */}
-      < section className="container mx-auto py-20" >
+      <section className="py-20">
         <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Our Core Philosophy
         </h2>
@@ -96,10 +93,10 @@ export default async function HomePage() {
             </Card>
           ))}
         </div>
-      </section >
+      </section>
 
       {/* ---------------- ISSUES ---------------- */}
-      < section className="container mx-auto py-20" >
+      <section className="py-20">
         <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Issues We Address
         </h2>
@@ -124,10 +121,10 @@ export default async function HomePage() {
             </Card>
           ))}
         </div>
-      </section >
+      </section>
 
       {/* ---------------- EVENTS ---------------- */}
-      < section className="container mx-auto py-20" >
+      <section className="py-20">
         <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Upcoming Events
         </h2>
@@ -163,10 +160,10 @@ export default async function HomePage() {
             </Card>
           ))}
         </div>
-      </section >
+      </section>
 
       {/* ---------------- CTA ---------------- */}
-      < section className="container mx-auto py-20" >
+      <section className="py-20">
         <Card className="text-black text-center p-12 rounded-sm">
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
             Ready to shift your frequency?
@@ -181,9 +178,7 @@ export default async function HomePage() {
             <Button variant="secondary"><Link href="/book">Secure Your Session</Link></Button>
           </div>
         </Card>
-      </section >
-
-
-    </>
+      </section>
+    </main>
   );
 }
