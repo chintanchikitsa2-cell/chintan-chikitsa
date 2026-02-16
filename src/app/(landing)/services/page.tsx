@@ -210,7 +210,7 @@ const services = [
     }
   },
   {
-    title: "Past File Regression",
+    title: "Past Life Regression",
     tag: "Subconscious",
     desc:
       "Unlock deep-seated emotional patterns through guided regression sessions.",
@@ -294,33 +294,34 @@ const services = [
     }
   },
   {
-    title: "Shamanic Practices",
-    tag: "Subconscious",
+    title: "Reiki Healing",
+    tag: "Energy Healing",
     desc:
-      "Unlock deep-seated emotional patterns through guided regression sessions.",
+      "Restore energetic balance and promote deep relaxation through gentle, non-invasive Reiki energy healing.",
     image: "/service/shamanic-practices.jpg",
     content: {
       overview: [
-        "Shamanism is an ancient spiritual tradition rooted in indigenous cultures and the belief that all life is interconnected.",
-        "Shamans enter altered states through ritual to seek healing, insight, and guidance.",
-        "Modern practice focuses on restoring balance and deepening connection with nature and inner awareness."
+        "Reiki is a Japanese energy healing technique that channels universal life force energy to support physical, emotional, and spiritual well-being.",
+        "The practice works by gently placing hands on or above the body to clear energetic blockages and restore balance.",
+        "Reiki encourages natural healing processes and promotes harmony within the mind and body."
       ],
       howItWorks: [
-        "Rituals using drumming or chanting.",
-        "Entering altered states of consciousness.",
-        "Energy cleansing or healing ceremonies.",
-        "Soul retrieval practices.",
-        "Integration and grounding."
+        "Client lies comfortably in a relaxed setting.",
+        "Practitioner channels universal life energy through hands.",
+        "Energy flows to areas needing balance or healing.",
+        "Blockages are gently released.",
+        "Session concludes with grounding and reflection."
       ],
       benefits: [
-        "Restored energetic balance.",
-        "Emotional healing.",
-        "Spiritual insight.",
-        "Connection to nature.",
-        "Greater self-awareness."
+        "Reduced stress and anxiety.",
+        "Improved emotional balance.",
+        "Enhanced relaxation and sleep quality.",
+        "Support for physical healing.",
+        "Greater inner peace and clarity."
       ]
     }
-  },
+  }
+  ,
   {
     title: "Angelic Therapy",
     tag: "Subconscious",

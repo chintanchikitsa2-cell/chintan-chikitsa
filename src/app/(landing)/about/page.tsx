@@ -20,7 +20,7 @@ function HeroSection() {
       <div className="mx-auto max-w-7xl px-4 grid gap-12 md:grid-cols-2 items-center">
 
         <div>
-          <Badge className="mb-6">ABOUT DEEPALI</Badge>
+          <Badge className="mb-6">ABOUT DEEPALLI</Badge>
 
           <blockquote className="mt-6 border-l-2 pl-6 italic text-3xl font-semibold">
             “My mission is to make children feel understood, supported, and
@@ -29,7 +29,7 @@ function HeroSection() {
           </blockquote>
 
           <p className="leading-7 [&:not(:first-child)]:mt-6">
-            I am Deepali Sharma, a Frequency Coach and holistic healer dedicated
+            I am Deepalli Sharma, a Frequency Coach and holistic healer dedicated
             to helping individuals and families navigate life’s emotional
             complexities with grace, intuition, and scientific understanding.
           </p>
