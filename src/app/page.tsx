@@ -85,15 +85,16 @@ export default async function HomePage() {
             },
           ].map((item) => (
             <Card key={item.title} className="rounded-sm overflow-hidden group">
-              <AspectRatio ratio={16 / 9}>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </AspectRatio>
+
               <CardHeader>
+                <AspectRatio ratio={16 / 9}>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-sm"
+                  />
+                </AspectRatio>
                 <CardTitle className="scroll-m-20 text-xl font-semibold tracking-tight">
                   {item.title}
                 </CardTitle>
