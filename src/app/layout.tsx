@@ -36,20 +36,17 @@ export default function RootLayout({
       >
         <main className="min-h-screen bg-[#f6f7e8] overflow-x-hidden">
           {/* ---------------- NAVBAR ---------------- */}
-          <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <MobileNav />
-              <Link href="/" className="flex items-center gap-2 font-bold text-base md:text-lg">
-                <Image
-                  src="/logo.jpg"
-                  alt="Chintan Chikitsa Logo"
-                  width={40}
-                  height={40}
-                  className="w-8 h-8 md:w-10 md:h-10 rounded-md shrink-0"
-                />
-                <span className="hidden sm:inline">Chintan.Chikitsa</span>
-              </Link>
-            </div>
+          <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6 flex items-center justify-between gap-2 md:gap-4">
+            <Link href="/" className="flex items-center gap-2 font-bold text-base md:text-lg">
+              <span>Chintan.Chikitsa</span>
+              <Image
+                src="/logo.jpg"
+                alt="Chintan Chikitsa Logo"
+                width={40}
+                height={40}
+                className="w-8 h-8 md:w-10 md:h-10 rounded-md shrink-0"
+              />
+            </Link>
 
             <NavigationMenu className="hidden md:block">
               <NavigationMenuList>
@@ -71,9 +68,12 @@ export default function RootLayout({
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button asChild size="sm" className="hidden md:flex">
-              <Link href="/book">Book Now</Link>
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button asChild size="sm">
+                <Link href="/book">Book Now</Link>
+              </Button>
+              <MobileNav />
+            </div>
           </header>
 
           {/* ---------------- BREADCRUMB ---------------- */}

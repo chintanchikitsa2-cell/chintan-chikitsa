@@ -24,25 +24,20 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-75 sm:w-100">
-        <SheetHeader className="px-2">
-          <SheetTitle>Menu</SheetTitle>
+        <SheetHeader className="px-2 pb-4">
+          <SheetTitle className="text-left">Menu</SheetTitle>
         </SheetHeader>
-        <nav className="flex flex-col gap-6 mt-8 px-2">
+        <nav className="flex flex-col gap-3 mt-4 px-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-lg font-medium hover:text-primary transition-colors py-2"
+              className="text-base font-medium hover:text-primary transition-colors py-2"
             >
               {link.label}
             </Link>
           ))}
-          <Button asChild className="mt-6 w-full">
-            <Link href="/book" onClick={() => setOpen(false)}>
-              Book Now
-            </Link>
-          </Button>
         </nav>
       </SheetContent>
     </Sheet>
