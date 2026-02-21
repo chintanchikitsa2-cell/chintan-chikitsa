@@ -82,26 +82,26 @@ export default function RootLayout({
           {children}
           {/* ---------------- FOOTER ---------------- */}
           <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 border-t">
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-              <div>
-                <p className="large">Chintan.Chikitsa</p>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
+              <div className="flex-1 max-w-md">
+                <p className="large mb-3">Chintan.Chikitsa</p>
                 <p className="muted">
                   Frequency Coach & Holistic Healer guiding you toward mental,
                   emotional, and spiritual harmony.
                 </p>
               </div>
 
-              <NavigationMenu>
-                <NavigationMenuList className="flex-col">
-                  {["Services", "About", "Contact", "Privacy"].map((link) => (
-                    <NavigationMenuItem key={link}>
-                      <NavigationMenuLink asChild>
-                        <Link href={`/${link.toLowerCase()}`}>{link}</Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  ))}
-                </NavigationMenuList>
-              </NavigationMenu>
+              <nav className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 lg:gap-8">
+                {["Services", "About", "Contact", "Privacy"].map((link) => (
+                  <Link
+                    key={link}
+                    href={`/${link.toLowerCase()}`}
+                    className="text-sm font-medium hover:text-primary transition-colors"
+                  >
+                    {link}
+                  </Link>
+                ))}
+              </nav>
             </div>
           </footer>
         </main>
