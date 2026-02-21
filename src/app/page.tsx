@@ -109,7 +109,7 @@ export default async function HomePage() {
       {/* ---------------- ISSUES ---------------- */}
       <section className="py-12 md:py-20 relative">
         <div className="absolute inset-0 bg-linear-to-b from-muted/30 to-background rounded-xl -z-10" />
-        
+
         <h2 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Issues We Address
         </h2>
