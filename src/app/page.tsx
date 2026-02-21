@@ -71,17 +71,28 @@ export default async function HomePage() {
             {
               title: "Mental Well-being",
               text: "Achieve radical clarity and focus through Neuro-Linguistic Programming (NLP) and access consciousness.",
+              image: "https://images.unsplash.com/photo-1674505520294-640e2382f525?w=800&q=80",
             },
             {
               title: "Emotional Balance",
               text: "Restore harmony to your inner world using gentle yet powerful nature-based Bach Flower Remedies.",
+              image: "https://images.unsplash.com/photo-1758274526671-ad18176acb01?w=800&q=80",
             },
             {
               title: "Spiritual Growth",
               text: "Reconnect with your purpose through guided Regression Therapy and intuitive energy work.",
+              image: "https://images.unsplash.com/photo-1767610966803-821ac98f3edc?w=800&q=80",
             },
           ].map((item) => (
-            <Card key={item.title} className="rounded-sm">
+            <Card key={item.title} className="rounded-sm overflow-hidden group">
+              <AspectRatio ratio={16 / 9}>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </AspectRatio>
               <CardHeader>
                 <CardTitle className="scroll-m-20 text-xl font-semibold tracking-tight">
                   {item.title}
@@ -96,26 +107,31 @@ export default async function HomePage() {
       </section>
 
       {/* ---------------- ISSUES ---------------- */}
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 relative">
+        <div className="absolute inset-0 bg-linear-to-b from-muted/30 to-background rounded-xl -z-10" />
+        
         <h2 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0 text-center">
           Issues We Address
         </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12">
           {[
-            "Anxiety Relief",
-            "Relationships",
-            "Fears & Phobias",
-            "Stress Management",
-            "Trauma Recovery",
-            "Sleep Disorders",
-            "Confidence Building",
-            "Spiritual Blockages",
+            { name: "Anxiety Relief", icon: "🧘‍♀️" },
+            { name: "Relationships", icon: "💝" },
+            { name: "Fears & Phobias", icon: "🌟" },
+            { name: "Stress Management", icon: "🌿" },
+            { name: "Trauma Recovery", icon: "🦋" },
+            { name: "Sleep Disorders", icon: "🌙" },
+            { name: "Confidence Building", icon: "💪" },
+            { name: "Spiritual Blockages", icon: "✨" },
           ].map((issue) => (
-            <Card key={issue} className="text-center rounded-sm">
-              <CardContent className="pt-4 md:pt-6">
+            <Card key={issue.name} className="text-center rounded-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+              <CardContent className="pt-4 md:pt-6 space-y-2">
+                <div className="text-3xl md:text-4xl transition-transform group-hover:scale-110 duration-300">
+                  {issue.icon}
+                </div>
                 <h4 className="scroll-m-20 text-base md:text-xl font-semibold tracking-tight">
-                  {issue}
+                  {issue.name}
                 </h4>
               </CardContent>
             </Card>

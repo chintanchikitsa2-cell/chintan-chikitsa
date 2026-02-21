@@ -158,7 +158,7 @@ const services = [
     tag: "Signature Journey",
     desc:
       "A premium 6-session journey designed for profound vibrational transformation.",
-    image: "/service/quantum-soul-alignment.jpg",
+    image: "https://images.unsplash.com/photo-1652341124412-c934d9f65443?w=800&q=80",
     content: {
       overview: [
         "Quantum Soul Alignment blends quantum-inspired ideas with spiritual self-awareness, suggesting that thoughts, emotions, and intentions operate like energetic frequencies that shape life experiences.",
@@ -186,7 +186,7 @@ const services = [
     tag: "Emotional Healing",
     desc:
       "Personalized floral essences for navigating anxiety, grief, and inner peace.",
-    image: "/service/bach-flower-remedies.jpg",
+    image: "https://images.unsplash.com/photo-1613887700980-b5653e86115e?w=800&q=80",
     content: {
       overview: [
         "Bach Flower Remedies are natural flower essences developed by Dr. Edward Bach to support emotional and mental well-being rather than physical symptoms.",
@@ -214,7 +214,7 @@ const services = [
     tag: "Subconscious",
     desc:
       "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "/service/past-file-regression.jpg",
+    image: "https://images.unsplash.com/photo-1760691313751-98262affa4f9?w=800&q=80",
     content: {
       overview: [
         "Child Regression Therapy helps individuals revisit unresolved childhood experiences that influence present emotions and behavior.",
@@ -242,7 +242,7 @@ const services = [
     tag: "Subconscious",
     desc:
       "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "/service/inner-child-healing.jpg",
+    image: "https://images.unsplash.com/photo-1615199951711-efaf9391bfc8?w=800&q=80",
     content: {
       overview: [
         "Child Regression Therapy supports healing unresolved childhood experiences that shape adult beliefs, emotions, and relationships.",
@@ -270,7 +270,7 @@ const services = [
     tag: "Subconscious",
     desc:
       "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "/service/sound-healing.jpg",
+    image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=800&q=80",
     content: {
       overview: [
         "Sound Healing Therapy uses frequencies and vibrations to encourage relaxation, emotional balance, and energetic harmony.",
@@ -298,7 +298,7 @@ const services = [
     tag: "Energy Healing",
     desc:
       "Restore energetic balance and promote deep relaxation through gentle, non-invasive Reiki energy healing.",
-    image: "/service/shamanic-practices.jpg",
+    image: "https://images.unsplash.com/photo-1719430225428-add80525dcae?w=800&q=80",
     content: {
       overview: [
         "Reiki is a Japanese energy healing technique that channels universal life force energy to support physical, emotional, and spiritual well-being.",
@@ -327,7 +327,7 @@ const services = [
     tag: "Subconscious",
     desc:
       "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "/service/angelic-therapy.jpg",
+    image: "https://images.unsplash.com/photo-1628784420252-1bfad7ad4aa0?w=800&q=80",
     content: {
       overview: [
         "Angelic Therapy works with intuitive guidance from angels and archangels to support emotional healing and inner peace.",
@@ -355,7 +355,7 @@ const services = [
     tag: "Subconscious",
     desc:
       "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "/service/aura-reading.jpg",
+    image: "https://images.unsplash.com/photo-1764053478954-4e4e3e6b16a4?w=800&q=80",
     content: {
       overview: [
         "Aura reading interprets the human energy field believed to reflect emotional, mental, and spiritual states.",
@@ -379,14 +379,14 @@ const services = [
     }
   },
   {
-    title: "Chakra Reading",
+    title: "Chakra Balancing",
     tag: "Subconscious",
     desc:
       "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "/service/chakra-reading.jpg",
+    image: "https://images.unsplash.com/photo-1631191832932-94bc1a53d770?w=800&q=80",
     content: {
       overview: [
-        "Chakra reading assesses the body’s seven main energy centers linked to emotional and spiritual themes.",
+        "Chakra balancing assesses the body’s seven main energy centers linked to emotional and spiritual themes.",
         "It helps identify imbalances that may influence recurring patterns or stress.",
         "The practice is complementary and focused on insight and reflection."
       ],
