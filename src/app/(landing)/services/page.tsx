@@ -16,27 +16,41 @@ export default function ServicesPage() {
       {/* ================= HERO ================= */}
 
       <section className="py-20 mx-auto w-full max-w-7xl px-6">
-        <Card className="p-16 text-center bg-muted/40 rounded-sm">
-
-          <p className="uppercase text-xs tracking-widest mb-3">
-            Elevate Your Vibration
-          </p>
-
-          <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
-            Therapeutic Services <br /> & Holistic Healing
-          </h1>
-
-          <p className="lead max-w-2xl mx-auto mt-6">
-            Explore a curated collection of quantum energy therapies and
-            cognitive alignment techniques designed to restore your emotional
-            and spiritual harmony.
-          </p>
-
-          <div className="flex justify-center gap-4 mt-10">
-            <Button>Free Consultation</Button>
-            <Button variant="outline">View Packages</Button>
+        <Card className="relative overflow-hidden p-16 text-center rounded-sm">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="https://images.unsplash.com/photo-1767884161044-e75de514a2a3?w=1920&q=80"
+              alt="Peaceful wellness stones"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Overlay for text readability */}
+            <div className="absolute inset-0 bg-[#f6f7e8]/50" />
           </div>
 
+          {/* Content */}
+          <div className="relative z-10">
+            <p className="uppercase text-xs tracking-widest mb-3">
+              Elevate Your Vibration
+            </p>
+
+            <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
+              Therapeutic Services <br /> & Holistic Healing
+            </h1>
+
+            <p className="lead max-w-2xl mx-auto mt-6">
+              Explore a curated collection of quantum energy therapies and
+              cognitive alignment techniques designed to restore your emotional
+              and spiritual harmony.
+            </p>
+
+            <div className="flex justify-center gap-4 mt-10">
+              <Button>Free Consultation</Button>
+              <Button variant="outline">View Packages</Button>
+            </div>
+          </div>
         </Card>
       </section>
 
