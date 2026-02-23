@@ -42,13 +42,12 @@ export default function ServicesPage() {
 
             <p className="lead max-w-2xl mx-auto mt-6">
               Explore a curated collection of quantum energy therapies and
-              cognitive alignment techniques designed to restore your emotional
+              cognitive alignment techniques designed to restore your mental, emotional
               and spiritual harmony.
             </p>
 
             <div className="flex justify-center gap-4 mt-10">
-              <Button>Free Consultation</Button>
-              <Button variant="outline">View Packages</Button>
+              <Button>Consultation</Button>
             </div>
           </div>
         </Card>
@@ -171,7 +170,7 @@ const services = [
     title: "Quantum Soul Alignment",
     tag: "Signature Journey",
     desc:
-      "A premium 6-session journey designed for profound vibrational transformation.",
+      "Connect with your higher self and see the blueprints of the future timeline, and embrace the higher wisdom of your higher self.",
     image: "https://images.unsplash.com/photo-1652341124412-c934d9f65443?w=800&q=80",
     content: {
       overview: [
@@ -181,7 +180,7 @@ const services = [
       ],
       howItWorks: [
         "Identifying inner belief and emotional patterns.",
-        "Releasing energetic or emotional blockages.",
+        "Releasing energetic or emotional cords.",
         "Aligning intentions with life purpose.",
         "Balancing logic, intuition, and emotion.",
         "Practicing conscious, intentional living."
@@ -199,7 +198,7 @@ const services = [
     title: "Bach Flower Remedies",
     tag: "Emotional Healing",
     desc:
-      "Personalized floral essences for navigating anxiety, grief, and inner peace.",
+      "Personalized flowers essences for navigating us to experience the bliss of life.",
     image: "https://images.unsplash.com/photo-1613887700980-b5653e86115e?w=800&q=80",
     content: {
       overview: [
@@ -227,27 +226,27 @@ const services = [
     title: "Past Life Regression",
     tag: "Subconscious",
     desc:
-      "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "https://images.unsplash.com/photo-1760691313751-98262affa4f9?w=800&q=80",
+      "Past life regression explores subconscious patterns, emotional blocks, and themes that may influence one's present life.",
+    image: "/service/past-file-regression.jpeg",
     content: {
       overview: [
-        "Child Regression Therapy helps individuals revisit unresolved childhood experiences that influence present emotions and behavior.",
-        "Through guided relaxation or hypnosis, people explore formative memories in a safe, controlled way to uncover emotional roots.",
-        "The approach focuses on reframing past experiences and integrating healing into present-day life."
+        "Past life regression uses guided relaxation to access subconscious memories and symbolic imagery that may relate to present-day patterns.",
+        "Sessions focus on understanding emotional roots, limiting beliefs, and repeating themes that feel unresolved.",
+        "The goal is insight, release, and integration so clients feel more grounded, clear, and empowered in daily life."
       ],
       howItWorks: [
-        "Entering a relaxed, receptive state.",
-        "Revisiting formative childhood memories safely.",
-        "Identifying emotional roots of present issues.",
-        "Reframing limiting beliefs.",
-        "Integrating insight into daily life."
+        "A guided relaxation to reach a calm, receptive state.",
+        "Exploring memories or symbolic narratives that arise.",
+        "Identifying emotional patterns linked to current challenges.",
+        "Reframing beliefs and releasing stuck emotions.",
+        "Grounding and integrating insights into everyday life."
       ],
       benefits: [
-        "Emotional clarity and healing.",
-        "Reduced anxiety and trauma responses.",
-        "Improved self-esteem.",
-        "Healthier relationship patterns.",
-        "Long-term personal growth."
+        "Emotional clarity and closure.",
+        "Relief from recurring fears or anxiety.",
+        "Improved self-understanding and confidence.",
+        "Healthier relationship dynamics.",
+        "A stronger sense of purpose and growth."
       ]
     }
   },
@@ -264,7 +263,7 @@ const services = [
         "The goal is to heal the inner child by replacing limiting beliefs and integrating emotional awareness into the present."
       ],
       howItWorks: [
-        "Guided relaxation or hypnosis.",
+        "Guided relaxation.",
         "Exploring formative childhood memories.",
         "Identifying subconscious emotional patterns.",
         "Reframing and releasing limiting beliefs.",
@@ -283,8 +282,8 @@ const services = [
     title: "Sound Healing",
     tag: "Subconscious",
     desc:
-      "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=800&q=80",
+      "A therapeutic practice that uses vibrations from instruments to balance the body's energy and calm the nervous system.",
+    image: "/service/sound-healing.jpg",
     content: {
       overview: [
         "Sound Healing Therapy uses frequencies and vibrations to encourage relaxation, emotional balance, and energetic harmony.",
@@ -295,8 +294,9 @@ const services = [
         "Client relaxes in a seated or lying position.",
         "Sounds are played around the body.",
         "Vibrations guide the mind into meditation.",
-        "Emotional tension releases naturally.",
-        "Session ends with grounding."
+        "Emotional tension and physical pain releases naturally.",
+        "Session ends with grounding.",
+        "Connecting with your inner self."
       ],
       benefits: [
         "Deep calm and relaxation.",
@@ -312,7 +312,7 @@ const services = [
     tag: "Energy Healing",
     desc:
       "Restore energetic balance and promote deep relaxation through gentle, non-invasive Reiki energy healing.",
-    image: "https://images.unsplash.com/photo-1719430225428-add80525dcae?w=800&q=80",
+    image: "/service/reiki-healing.jpeg",
     content: {
       overview: [
         "Reiki is a Japanese energy healing technique that channels universal life force energy to support physical, emotional, and spiritual well-being.",
@@ -340,7 +340,7 @@ const services = [
     title: "Angelic Therapy",
     tag: "Subconscious",
     desc:
-      "Unlock deep-seated emotional patterns through guided regression sessions.",
+      "Angelic healing is a gentle energy healing practice that works with angelic frequencies to clear emotional, mental, and energetic blockages.",
     image: "https://images.unsplash.com/photo-1628784420252-1bfad7ad4aa0?w=800&q=80",
     content: {
       overview: [
@@ -353,14 +353,13 @@ const services = [
         "Receiving intuitive guidance.",
         "Sharing insights or impressions.",
         "Invoking healing energy.",
-        "Closing with grounding."
       ],
       benefits: [
         "Emotional comfort.",
         "Greater clarity.",
         "Sense of protection.",
         "Stronger intuition.",
-        "Spiritual reassurance."
+        "Spiritual alignment."
       ]
     }
   },
@@ -368,12 +367,12 @@ const services = [
     title: "Aura Reading",
     tag: "Subconscious",
     desc:
-      "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "https://images.unsplash.com/photo-1764053478954-4e4e3e6b16a4?w=800&q=80",
+      "Aura reading is the intuitive interpretation of the energy field surrounding a person to understand their emotional, mental, and spiritual state.",
+    image: "/service/aura-reading.jpeg",
     content: {
       overview: [
         "Aura reading interprets the human energy field believed to reflect emotional, mental, and spiritual states.",
-        "It focuses on self-awareness rather than prediction or diagnosis.",
+        "Helps identify energetic imbalances, strengths, and patterns influencing their current life experiences.",
         "Readers observe colors, brightness, and energy flow to identify imbalances."
       ],
       howItWorks: [
@@ -396,13 +395,12 @@ const services = [
     title: "Chakra Balancing",
     tag: "Subconscious",
     desc:
-      "Unlock deep-seated emotional patterns through guided regression sessions.",
-    image: "https://images.unsplash.com/photo-1631191832932-94bc1a53d770?w=800&q=80",
+      "Chakra balancing is the practice of aligning and harmonizing the body's seven main energy centers to support physical, emotional, and spiritual well-being.",
+    image: "/service/chakra-balancing.jpeg",
     content: {
       overview: [
         "Chakra balancing assesses the body’s seven main energy centers linked to emotional and spiritual themes.",
         "It helps identify imbalances that may influence recurring patterns or stress.",
-        "The practice is complementary and focused on insight and reflection."
       ],
       howItWorks: [
         "Energy sensing of each chakra.",
@@ -417,6 +415,35 @@ const services = [
         "Improved mind–body connection.",
         "Support for growth.",
         "Enhanced balance."
+      ]
+    }
+  }
+  ,
+  {
+    title: "Tarot Cards",
+    tag: "Divination",
+    desc:
+      "Tarot cards are a symbolic divination tool used to gain insight into life situations, emotions, and possible outcomes.",
+    image: "https://images.unsplash.com/photo-1719430225428-add80525dcae?w=800&q=80",
+    content: {
+      overview: [
+        "Tarot uses a deck of symbolic images to reflect inner patterns, questions, and emotional currents.",
+        "A reading offers perspective on present circumstances and possible directions, rather than fixed predictions.",
+        "Sessions focus on clarity, reflection, and practical next steps aligned with your values."
+      ],
+      howItWorks: [
+        "Brief intake to set intentions and clarify the focus.",
+        "Cards are drawn in a spread aligned to the question.",
+        "Symbols and themes are interpreted collaboratively.",
+        "Key insights are summarized with actionable guidance.",
+        "A closing reflection to integrate the reading."
+      ],
+      benefits: [
+        "Greater emotional clarity.",
+        "Fresh perspective on decisions.",
+        "Insight into patterns and relationships.",
+        "Support for mindful next steps.",
+        "A grounded sense of direction."
       ]
     }
   }

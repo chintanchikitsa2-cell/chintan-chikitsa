@@ -48,9 +48,7 @@ export default async function HomePage() {
           </h1>
 
           <p className="leading-7 not-first:mt-6 text-sm md:text-base">
-            Discover a sanctuary of holistic healing with Deepali Sharma.
-            Experience the gentle power of Bach Flower Remedies and the profound
-            depth of Regression Therapy.
+
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -70,17 +68,17 @@ export default async function HomePage() {
           {[
             {
               title: "Mental Well-being",
-              text: "Achieve radical clarity and focus through Neuro-Linguistic Programming (NLP) and access consciousness.",
+              text: "Achieve radical clarity and focus through Neuro-Linguistic Programming (NLP) and different healing modalities to access your inner consciousness.",
               image: "https://images.unsplash.com/photo-1674505520294-640e2382f525?w=800&q=80",
             },
             {
               title: "Emotional Balance",
-              text: "Restore harmony to your inner world using gentle yet powerful nature-based Bach Flower Remedies.",
+              text: "Restore harmony of your inner self with the help of Bach flower remedies , NLP or different holistic modalities.",
               image: "https://images.unsplash.com/photo-1758274526671-ad18176acb01?w=800&q=80",
             },
             {
               title: "Spiritual Growth",
-              text: "Reconnect with your purpose through guided Regression Therapy and intuitive energy work.",
+              text: "Reconnect with your higher purpose and connect with your inner consciousness through regression therapies and quantum soul alignment.",
               image: "https://images.unsplash.com/photo-1767610966803-821ac98f3edc?w=800&q=80",
             },
           ].map((item) => (
@@ -125,6 +123,10 @@ export default async function HomePage() {
             { name: "Sleep Disorders", icon: "🌙" },
             { name: "Confidence Building", icon: "💪" },
             { name: "Spiritual Blockages", icon: "✨" },
+            { name: "Addictions", icon: "⛓️" },
+            { name: "Depression", icon: "💙" },
+            { name: "Menopause Wellness", icon: "🌸" },
+            { name: "OCD", icon: "🔄" },
           ].map((issue) => (
             <Card key={issue.name} className="text-center rounded-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
               <CardContent className="pt-4 md:pt-6 space-y-2">

@@ -43,6 +43,13 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Info } from "lucide-react";
 import { bookAppointment } from "@/actions/appointment";
 
@@ -68,19 +75,30 @@ const therapies = [
   "NLP Coaching",
 ];
 
-const slots = [
-  "10:00 AM",
-  "11:30 AM",
-  "02:00 PM",
-  "03:30 PM",
-  "05:00 PM",
-  "06:30 PM",
-];
+const slots = (() => {
+  const startMinutes = 10 * 60;
+  const endMinutes = 19 * 60;
+  const step = 30;
+  const labels: string[] = [];
+
+  for (let minutes = startMinutes; minutes <= endMinutes; minutes += step) {
+    const hours24 = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    const period = hours24 >= 12 ? "PM" : "AM";
+    const hours12 = hours24 % 12 || 12;
+    const label = `${hours12.toString().padStart(2, "0")}:${mins.toString().padStart(2, "0")
+      } ${period}`;
+
+    labels.push(label);
+  }
+
+  return labels;
+})();
 
 /* ---------------- PAGE ---------------- */
 
 export default function BookingPage() {
-  const [therapy, setTherapy] = useState(therapies[0]);
+  const [therapy] = useState(therapies[0]);
   const [date, setDate] = useState<Date>();
   const [slot, setSlot] = useState<string>();
 
@@ -138,28 +156,6 @@ export default function BookingPage() {
 
         <div className="lg:col-span-2 space-y-10">
 
-          {/* ---- Therapy ---- */}
-
-          <Card>
-            <CardHeader>
-              <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                1. Select Your Therapy
-              </h3>
-            </CardHeader>
-
-            <CardContent className="flex flex-wrap gap-3">
-              {therapies.map((t) => (
-                <Button
-                  key={t}
-                  variant={therapy === t ? "default" : "outline"}
-                  onClick={() => setTherapy(t)}
-                >
-                  {t}
-                </Button>
-              ))}
-            </CardContent>
-          </Card>
-
           {/* ---- Date & Time ---- */}
 
           <Card>
@@ -180,24 +176,26 @@ export default function BookingPage() {
               <div className="space-y-4">
                 <p className="muted">Available Slots</p>
 
-                <div className="grid grid-cols-2 gap-3">
-                  {slots.map((s) => (
-                    <Button
-                      key={s}
-                      variant={slot === s ? "default" : "outline"}
-                      onClick={() => setSlot(s)}
-                    >
-                      {s}
-                    </Button>
-                  ))}
-                </div>
+                <Select onValueChange={setSlot} value={slot}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a time" />
+                  </SelectTrigger>
 
-                <Alert>
+                  <SelectContent>
+                    {slots.map((s) => (
+                      <SelectItem key={s} value={s}>
+                        {s}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                {/* <Alert>
                   <Info className="h-4 w-4" />
                   <AlertDescription>
                     Sessions are 60 minutes long. Join 5 minutes early.
                   </AlertDescription>
-                </Alert>
+                </Alert> */}
               </div>
             </CardContent>
           </Card>
@@ -207,7 +205,7 @@ export default function BookingPage() {
           <Card>
             <CardHeader>
               <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                3. Personal Information
+                2. Personal Information
               </h3>
             </CardHeader>
 
@@ -327,8 +325,8 @@ export default function BookingPage() {
 
             <p>
               <span className="muted">Email:</span>{" "}
-              <Link href="mailto:test@gmail.com">
-                test@gmail.com
+              <Link href="mailto:chintanchikitsa2@gmail.com">
+                chintanchikitsa2@gmail.com
               </Link>
             </p>
 
@@ -337,8 +335,20 @@ export default function BookingPage() {
             </p>
 
             <div className="flex gap-3">
-              <Badge>Instagram</Badge>
-              <Badge variant="outline">LinkedIn</Badge>
+              <Link
+                href="https://www.instagram.com/chintan.chikitsa?igsh=MWR3ODhpcXdtaGNjeA=="
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Badge>Instagram</Badge>
+              </Link>
+              <Link
+                href="https://www.facebook.com/share/1FmXaRAF9i/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Badge variant="outline">Facebook</Badge>
+              </Link>
             </div>
 
           </CardContent>

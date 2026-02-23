@@ -21,12 +21,12 @@ function HeroSection() {
 
         <div>
           <Badge className="mb-6">ABOUT DEEPALLI</Badge>
-
+          {/* 
           <blockquote className="mt-6 border-l-2 pl-6 italic text-3xl font-semibold">
             “My mission is to make children feel understood, supported, and
             emotionally strong —{" "}
             <span className="text-primary">not labeled, not limited.</span>”
-          </blockquote>
+          </blockquote> */}
 
           <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
             I am Deepalli Sharma, a holistic healing practitioner dedicated
