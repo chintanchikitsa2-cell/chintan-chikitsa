@@ -126,7 +126,7 @@ export default async function HomePage() {
             { name: "Addictions", icon: "⛓️" },
             { name: "Depression", icon: "💙" },
             { name: "Menopause Wellness", icon: "🌸" },
-            { name: "OCD", icon: "🔄" },
+            { name: "Obsessive Compulsive Disorder", icon: "🔄" },
           ].map((issue) => (
             <Card key={issue.name} className="text-center rounded-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
               <CardContent className="pt-4 md:pt-6 space-y-2">
