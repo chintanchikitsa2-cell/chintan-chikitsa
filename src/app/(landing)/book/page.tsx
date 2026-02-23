@@ -161,7 +161,7 @@ export default function BookingPage() {
           <Card>
             <CardHeader>
               <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                2. Choose Date & Time
+                1. Choose Date & Time
               </h3>
             </CardHeader>
 
