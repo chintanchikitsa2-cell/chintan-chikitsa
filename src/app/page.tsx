@@ -21,6 +21,8 @@ import { EventRegistrationDialog } from "@/components/landing/EventRegistrationD
 import { getEvents } from "@/actions/event";
 import { getSupabaseImage } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 
 
 export default async function HomePage() {
